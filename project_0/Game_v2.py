@@ -7,15 +7,27 @@ def random_predict(number:int=1) -> int:
 
     Returns:
         int: Число попыток
-    """
-    
-    count = 0
-    
-    while True:
-        count +=1
-        predict_number = np.random.randint(1, 101) # Предпологаемое число
-        if number == predict_number:
-            break
+    """   
+        
+    count = 0 
+    # Задаём левую и правую границу промежутка случайных чисел
+    left_side = 1
+    right_side = 101
+    predict_number = np.random.randint(left_side, right_side) # Предпологаемое число
+        
+    while number != predict_number:
+        count += 1
+        # Если предпологаемое число меньше угадываемого,
+        # предпологаемое число становится новой левой границей промежутка
+        if number > predict_number:
+            left_side = predict_number
+            predict_number = np.random.randint(left_side, right_side)
+        # Если предпологаемое число больше угадываемого,
+        # предпологаемое число становится новой правой границей промежутка
+        elif number < predict_number:
+            right_side = predict_number + 1
+            predict_number = np.random.randint(left_side, right_side)
+        
     return count
 
 def score_game(random_predict) -> int:
