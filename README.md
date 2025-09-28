@@ -5,7 +5,7 @@ From the [Skillfactory Data Science course](https://skillfactory.ru/data-scienti
 
 *[Проект 0. Игра угадай число](https://github.com/Sumor0k/sf_data_science/tree/main/project_0) 
 
-*[Проект 1. _________](___) 
+*[Проект 1. Анализ резюме из HeadHunter](https://github.com/Sumor0k/sf_data_science/tree/main/project_1) 
 
 *[Проект 2. _________](___) 
 
